@@ -3,7 +3,7 @@ package da25_3.test.sync;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
-import da25_3.Headquarters;
+import da25_3.entities.Headquarters;
 import da25_3.interfaces.EndCallback;
 import da25_3.interfaces.HeadquartersInterface;
 import da25_3.people.General;

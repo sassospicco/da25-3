@@ -1,4 +1,4 @@
-package da25_3;
+package da25_3.entities;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
