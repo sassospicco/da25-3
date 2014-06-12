@@ -48,7 +48,7 @@ public abstract class General implements GeneralInterface {
 	public void println(Object o) {
 		String s = (String) o;
 		
-		if (id != 1 && !s.substring(0, 8).equals("Decision")) {
+		if (id != 0 && !s.substring(0, 8).equals("Decision")) {
 			return;
 		}
 		

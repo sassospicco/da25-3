@@ -11,25 +11,5 @@ public class Test1 {
 		 */
 		t = new StandardTest();
 		t.run(3, 0, General.DISLOYAL_TRAITOR, 0);
-
-		System.out.println();
-
-		/*
-		 * No disloyal general, but much larger number of them.
-		 */
-		t = new StandardTest();
-		t.run(50, 0, General.DISLOYAL_TRAITOR, 0);
-
-		System.out.println();
-		
-		/*
-		 * No disloyal general, but huge number of them.
-		 */
-//		t = new StandardTest();
-//		t.run(500, 0, General.DISLOYAL_TRAITOR, 0);
-//
-//		System.out.println();
-		
-		System.exit(0);
 	}
 }

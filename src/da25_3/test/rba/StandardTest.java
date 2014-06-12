@@ -14,7 +14,7 @@ public class StandardTest implements EndCallback {
 	public ArrayList<General> gRef = new ArrayList<>();
 	
 	public void run(int loyalCount, int disloyalCount, int disloyalType, int f) {
-		Headquarters.unbindInstance();
+//		Headquarters.unbindInstance();
 		
 		hq = Headquarters.getInstance(this);
 		
@@ -28,6 +28,10 @@ public class StandardTest implements EndCallback {
 				gRef.add(general);
 				general.register(hq);
 			}
+    		
+    		if (disloyalCount > f) {
+    			System.out.println("Caution! There are more disloyal generals than the algorithm is ready to handle.");
+    		}
     		
     		for (int i = 0; i < disloyalCount; i++) {
 				RbaGeneral general = new RbaGeneral(disloyalType);

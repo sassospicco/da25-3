@@ -160,15 +160,15 @@ public class RbaGeneral extends General {
 			if (decided) {
 				stopped = true;
 				
-				executor.schedule(new Runnable() {
-					@Override
-					public void run() {
-						try {
-							hq.terminate();
-						} catch (RemoteException e) {
-						}
-					}
-				}, 3 * MAX_DELAY, TimeUnit.MILLISECONDS);
+//				executor.schedule(new Runnable() {
+//					@Override
+//					public void run() {
+//						try {
+//							hq.terminate();
+//						} catch (RemoteException e) {
+//						}
+//					}
+//				}, 3 * MAX_DELAY, TimeUnit.MILLISECONDS);
 			}
 			
 			trueCount = 0;
