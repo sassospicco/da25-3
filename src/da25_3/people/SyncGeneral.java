@@ -110,8 +110,6 @@ public class SyncGeneral extends General {
 					@Override
 					public void run() {
 						if (id == 1) {
-//							System.out.println(record);
-							
 							try {
 								hq.terminate();
 							} catch (Exception e) {
@@ -130,9 +128,5 @@ public class SyncGeneral extends General {
 				SyncGeneral.this.executeRound();
 			}
 		}, ROUND_DURATION, TimeUnit.MILLISECONDS);
-	}
-	
-	public void println(Object s) {
-		System.out.println("General "+id+": "+s);
 	}
 }

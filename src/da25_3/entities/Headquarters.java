@@ -50,8 +50,8 @@ public class Headquarters implements HeadquartersInterface {
 		
 		int count = generals.size();
 		
-		if (f >= count / 3D) {
-			System.out.println("Caution! The necessary condition is not met.");
+		if (f >= count / 5D) {
+			System.out.println("Caution! Condition 5f < n is not met.");
 		}
 		
 		for (GeneralInterface g : generals) {
@@ -89,7 +89,7 @@ public class Headquarters implements HeadquartersInterface {
 				HeadquartersInterface stub = (HeadquartersInterface) UnicastRemoteObject.exportObject(hq, 0);
 				registry.rebind(HeadquartersInterface.class.getCanonicalName(), stub);
 			} catch (Exception e2) {
-				e.printStackTrace();
+				e2.printStackTrace();
 				throw new RuntimeException(e2);
 			}
 		}

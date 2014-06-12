@@ -44,4 +44,14 @@ public abstract class General implements GeneralInterface {
 		
 		executor = new ScheduledThreadPoolExecutor(count + 1);
 	}
+	
+	public void println(Object o) {
+		String s = (String) o;
+		
+		if (id != 1 && !s.substring(0, 8).equals("Decision")) {
+			return;
+		}
+		
+		System.out.println("General "+id+": "+o);
+	}
 }
