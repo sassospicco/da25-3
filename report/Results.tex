@@ -1,0 +1,94 @@
+\section{Results}
+
+\subsection{All loyal test}
+table \ref{table:resultsAllLoyal} shows the result of a test run with all loyal processes. because of the small number, consensus is reached in the first round.
+
+
+\begin{table}[h]
+	\begin{tabular}{ | c | c  | c  | c| }
+		\hline
+  		round & process 1 & process 2 & process 3 \\
+		\hline
+ 		intial value &  false & false & true  \\
+		\hline
+  		decision  & false & false & false  \\
+		\hline
+	\end{tabular}
+	\caption{results for the test where all processes are loyal}	
+	\label{table:resultsAllLoyal}
+\end{table}
+
+\subsection{5f < n test}
+table \ref{table:resultsFewDisloyal} shows the result of a test run with only 1 disloyal process.
+The results show that the algorithm does reach consensus for this condition in 4 rounds.
+
+
+\begin{table}[h]
+	\begin{tabular}{ | c | c  | c  | c| c | c | c | c |}
+		\hline
+  		round & process 1 & process 2 & process 3 & process 4 & process 5 & process 6 & process 7 \\
+		\hline
+ 		intial value &  true & false & true  & false & false & true & true \\
+		\hline
+		1  &  true & true & true  & true & false & false & false \\
+		\hline
+		2  &  false & true & false  & false & true & true & true \\
+		\hline
+		3  &  true & true & false  & true & true & true & true \\
+		\hline
+  		decision  &  true & true & true  & true & true & true & true  \\
+		\hline
+	\end{tabular}
+	\caption{results for the test where 1 process is disloyal, compared to 7 loyal processes}	
+	\label{table:resultsFewDisloyal}
+\end{table}
+
+\subsection{5f = n test}
+table \ref{table:resultsBoundaryDisloyal} shows the result of a test run where the condition 5f < n is just not met (5f = n). 
+Now the algorihm reaches a consensus, but not the expected one given the intial values.
+
+
+\begin{table}[h]
+	\begin{tabular}{ | c | c  | c  | c| c | c |}
+		\hline
+  		round & process 1 & process 2 & process 3 & process 4 & process 5  \\
+		\hline
+ 		intial value &  true & true & false  & false & true\\
+		\hline
+		1  &  false & false & false  & false & true  \\
+		\hline
+		2  &  no new value & no new value & no new value  & no new value & no new value \\
+		\hline
+  		decision  &  false & false & false  & false & false \\
+		\hline
+	\end{tabular}
+	\caption{results for the test where 1 process is disloyal, compared to 5 loyal processes}	
+	\label{table:resultsBoundaryDisloyal}
+\end{table}
+
+\subsection{5f > n test}
+ 
+When the number of disloyal processes is  increased to be a signifacnt amount of the total number of processes the algorithm most of the time doesn't reach consensus within a reasonable amount of time.
+
+\subsection{Large n test}
+table \ref{table:resultsBoundaryDisloyal} shows the result of a test run where the condition 5f < n is just not met (5f = n). 
+Now the algorihm reaches a consensus, but not the expected one given the intial values.
+
+
+\begin{table}[h]
+	\begin{tabular}{ | c | c  | c  | c| c | c |}
+		\hline
+  		round & process 1 & process 2 & process 3 & process 4 & process 5  \\
+		\hline
+ 		intial value &  true & true & false  & false & true\\
+		\hline
+		1  &  false & false & false  & false & true  \\
+		\hline
+		2  &  no new value & no new value & no new value  & no new value & no new value \\
+		\hline
+  		decision  &  false & false & false  & false & false \\
+		\hline
+	\end{tabular}
+	\caption{results for the test where 1 process is disloyal, compared to 5 loyal processes}	
+	\label{table:resultsBoundaryDisloyal}
+\end{table}

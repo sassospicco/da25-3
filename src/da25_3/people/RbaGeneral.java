@@ -196,6 +196,9 @@ public class RbaGeneral extends General {
 			} else {
 				Random rand = new Random();
 				v = rand.nextBoolean();
+				if (loyalty == General.LOYAL) {
+					//System.out.println("General "+id+": new random value = " + v);
+				}
 			}
 			
 			trueCount = 0;
@@ -219,7 +222,9 @@ public class RbaGeneral extends General {
 		
 		Random rand = new Random();
 		v = rand.nextBoolean();
-		
+		if (loyalty == General.LOYAL) {
+			//System.out.println("General "+id+": initial value = " + v);
+		}
 		executor.schedule(new Runnable() {
 			@Override
 			public void run() {
