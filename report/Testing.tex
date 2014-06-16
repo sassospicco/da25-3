@@ -1,9 +1,9 @@
 \section{Test setup}
 
-To verify if our implemetation is correct, we ran some tests.
-The test our designed to check on some boundary conditions.
-The variable parameters are the number of loyal processes(n), the number of disloyal processes(f) and the type of faulty processes.
-table \ref{table:Tests} shows the paramters for the diferrent tests we ran. Each test is run for each type of faulty process.
+To verify if our implementation is correct, we ran some tests.
+The test are designed to check on some boundary conditions.
+The variable parameters are the total number processes(n), the number of disloyal processes(f) and the type of faulty processes.
+table \ref{table:Tests} shows the parameters for the different tests we ran. Each test is run for each type of faulty process to check the correct execution.
 
 \begin{table}[h]
 	\begin{tabular}{ | c | c  | c  | }
@@ -12,7 +12,7 @@ table \ref{table:Tests} shows the paramters for the diferrent tests we ran. Each
 		\hline
  		All loyal &  3 & 0  \\
 		\hline
-  		5f < n  & 7 & 1  \\
+  		5f < n  & 8 & 1  \\
 		\hline
 		5f = n & 5 & 1 \\
 		\hline
@@ -21,6 +21,6 @@ table \ref{table:Tests} shows the paramters for the diferrent tests we ran. Each
 		large n  & 100 & 0 \\
 		\hline
 	\end{tabular}
-	\caption{Parameters for the diferrent test}	
+	\caption{Parameters for the different test}	
 	\label{table:Tests}
 \end{table}
