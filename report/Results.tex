@@ -48,20 +48,20 @@ The results show that the algorithm does reach consensus for this condition in 4
 \subsection{5f = n test}
 Table \ref{table:resultsBoundaryDisloyal} shows the result of a test run where the condition 5f < n is just not met. 
 Now the algorithm still reaches a consensus, but not the expected one given the intial values.
-
+Some test runs do not even reach consensus in a reasonable amount of time, or some show that 1 process reaches a decission without the others reaching it in the next round.
 
 \begin{table}[h]
 	\begin{tabular}{ | c | c  | c  | c| c | c |}
 		\hline
-  		round & process 1 & process 2 & process 3 & process 4 & process 5  \\
+  		round & process 1 & process 2 & process 3 & process 4  \\
 		\hline
- 		intial value &  true & true & false  & false & true\\
+ 		intial value &  true & true & false & true\\
 		\hline
-		1  &  false & false & false  & false & true  \\
+		1  &  false & false & false  & true  \\
 		\hline
-		2  &  no new value & no new value & no new value  & no new value & no new value \\
+		2  &  no random value &  no random value & no random value &  no random value \\
 		\hline
-  		decision  &  false & false & false  & false & false \\
+  		decision  &  false & false & false  & false  \\
 		\hline
 	\end{tabular}
 	\caption{results for the test where 1 process is disloyal, compared to 4 loyal processes}	
@@ -73,24 +73,24 @@ Now the algorithm still reaches a consensus, but not the expected one given the 
 When the number of disloyal processes is  increased to be a significant amount of the total number of processes the algorithm most of the time doesn't reach consensus within a reasonable amount of time.
 
 \subsection{Large n test}
-Table \ref{table:resultsLargeN} shows the result of a test run where N = 100, to save on data we only show the amount of rounds it took to reach consensus for a couple of test runs
+Table \ref{table:resultsLargeN} shows the result for tests where n gets increasingly large, to save on data we only show the amount of rounds it took to reach consensus for the different process counts.
 
 
 
 \begin{table}[h]
-	\begin{tabular}{ | c | c  | c  | c| c | c |}
+	\begin{tabular}{ | c | c  | }
 		\hline
-  		 & Rounds untill concensus \\
+  		 number of processes & Rounds untill consensus \\
 		\hline
- 		test 1 &   \\
+ 		50 & 141 & 74 & 108   \\
 		\hline
-		test 2  &    \\
+		60  & 147    \\
 		\hline
-		test 3  &    \\
+		70  & 4136    \\
 		\hline
-  		average  &    \\
+  		80  & 384   \\
 		\hline
 	\end{tabular}
-	\caption{results for test where we have 100 processes}	
+	\caption{results for tests with increasingly larger N}	
 	\label{table:resultsLargeN}
 \end{table}
