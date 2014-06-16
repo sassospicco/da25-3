@@ -10,6 +10,6 @@ public class Test1 {
 		 * No disloyal general. The most simple case.
 		 */
 		t = new StandardTest();
-		t.run(70, 0, General.DISLOYAL_TRAITOR, 13);
+		t.run(4, 1, General.DISLOYAL_TRAITOR, 1);
 	}
 }

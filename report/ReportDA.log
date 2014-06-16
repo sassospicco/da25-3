@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.11)  16 JUN 2014 15:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.11)  16 JUN 2014 16:05
 entering extended mode
 **C:/Users/Casper/workspace/da-3/da25-3/report/ReportDA.tex
 (C:/Users/Casper/workspace/da-3/da25-3/report/ReportDA.tex
@@ -142,7 +142,7 @@ Overfull \hbox (78.36237pt too wide) in paragraph at lines 29--44
  []
 
 
-Overfull \hbox (55.66547pt too wide) in paragraph at lines 56--69
+Overfull \hbox (55.66547pt too wide) in paragraph at lines 55--68
 [][] 
  []
 
@@ -163,13 +163,13 @@ Here is how much of TeX's memory you used:
  3905 multiletter control sequences out of 15000+200000
  44213 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 23i,8n,22p,415b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,8n,22p,385b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
 /lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb>
-Output written on ReportDA.pdf (5 pages, 117252 bytes).
+Output written on ReportDA.pdf (5 pages, 117887 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
