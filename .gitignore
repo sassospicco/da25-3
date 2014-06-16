@@ -1,1 +1,4 @@
 /bin
+*.aux
+*.synctex.gz
+*.log
