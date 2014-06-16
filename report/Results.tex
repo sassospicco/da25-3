@@ -47,10 +47,9 @@ The results show that the algorithm does reach consensus for this condition in 4
 
 \subsection{5f = n test}
 Table \ref{table:resultsBoundaryDisloyal} shows the result of a test run where the condition 5f < n is just not met. 
-Now the algorithm still reaches a consensus, though when we run more tests not always is the outcome correct.
-Some test runs do not even reach consensus in a reasonable amount of time, or some show that 1 process reaches a decision without the others reaching it in the next round. 
+Now the algorithm may reach a consensus in the very first rounds, like in the test shown. Otherwise, one or more processes reaches a decision, without the others being able to reach it in the following round and therefore starting to wait indefinitely.
 
-The results will depend on the initial conditions a lot, if (almost) all processes start with the same value, chances are they still reach the right decision. When the possible intial values are more equally distributed, however, the faulty processes can make the intermediate decisions undecided or even tip over to the wrong decision.
+The outcome will depend on the initial conditions: if (almost) all processes start with the same value, they will reach the right decision immediately; when the possible intial values are more equally distributed, the faulty processes can wrongly convince a subset of processes that a decision was reached.
 
 \begin{table}[h]
 	\begin{tabular}{ | c | c  | c  | c| c | c |}
