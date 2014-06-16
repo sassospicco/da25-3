@@ -47,8 +47,10 @@ The results show that the algorithm does reach consensus for this condition in 4
 
 \subsection{5f = n test}
 Table \ref{table:resultsBoundaryDisloyal} shows the result of a test run where the condition 5f < n is just not met. 
-Now the algorithm still reaches a consensus, but not the expected one given the intial values.
-Some test runs do not even reach consensus in a reasonable amount of time, or some show that 1 process reaches a decission without the others reaching it in the next round.
+Now the algorithm still reaches a consensus, though when we run more tests not always is the outcome correct.
+Some test runs do not even reach consensus in a reasonable amount of time, or some show that 1 process reaches a decision without the others reaching it in the next round. 
+
+The results will depend on the initial conditions a lot, if (almost) all processes start with the same value, chances are they still reach the right decision. When the possible intial values are more equally distributed, however, the faulty processes can make the intermediate decisions undecided or even tip over to the wrong decision.
 
 \begin{table}[h]
 	\begin{tabular}{ | c | c  | c  | c| c | c |}
@@ -70,7 +72,9 @@ Some test runs do not even reach consensus in a reasonable amount of time, or so
 
 \subsection{5f > n test}
  
-When the number of disloyal processes is  increased to be a significant amount of the total number of processes the algorithm most of the time doesn't reach consensus within a reasonable amount of time.
+When the number of disloyal processes is  increased to be a significant amount of the total number of processes the algorithm most of the time doesn't reach consensus within a reasonable amount of time. 
+
+This is probably due to the fact that when a large number of processors is faulty (f is high) the treshold for making a decision rises and the chance the process will create a new random intermediate decision rises as well. this way the chance of all processes reaching consensus gets really small.
 
 \subsection{Large n test}
 Table \ref{table:resultsLargeN} shows the result for tests where n gets increasingly large, to save on data we only show the amount of rounds it took to reach consensus for the different process counts.
@@ -78,19 +82,19 @@ Table \ref{table:resultsLargeN} shows the result for tests where n gets increasi
 
 
 \begin{table}[h]
-	\begin{tabular}{ | c | c  | }
+	\begin{tabular}{ | c | c  | c | c |  c |}
 		\hline
-  		 number of processes & Rounds untill consensus \\
+  		 number of processes & \multicolumn{3}{|c|}{Rounds untill consensus }  & average\\
 		\hline
- 		50 & 141 & 74 & 108   \\
+ 		50 & 141 & 74 & 108  & 108   \\
 		\hline
-		60  & 147    \\
+		60  & 147  &576 & 1077  & 600     \\
 		\hline
-		70  & 4136    \\
-		\hline
-  		80  & 384   \\
+		70  & 4136 & 2844 & 1529  & 2836    \\
 		\hline
 	\end{tabular}
 	\caption{results for tests with increasingly larger N}	
 	\label{table:resultsLargeN}
 \end{table}
+
+The results are too few to be an exact representation of the expected value, but they do show the exponential relation between number of processes and rounds to reach consensus.
